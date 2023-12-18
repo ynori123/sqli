@@ -21,7 +21,7 @@ app.add_middleware(
 
 templates = Jinja2Templates(directory='templates')
 
-DATABASE_URI = "sqlite:///sqli.db"
+DATABASE_URI = os.environ["DATABASE_URI"]
 engine = create_engine(
     DATABASE_URI,
     connect_args={"check_same_thread": False}, 
