@@ -6,4 +6,4 @@
 - SQLite
 
 ## Infrastructure
-- GCP Cloud Run
+- render.com
