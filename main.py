@@ -6,7 +6,12 @@ from sqlalchemy.ext.declarative import declarative_base
 import os
 from sqlalchemy.orm import sessionmaker
 import hashlib
+from dotenv import load_dotenv
 
+load_dotenv(verbose=True)
+
+dotenv_path = os.join(os.dirname(__file__), '.env')
+load_dotenv(dotenv_path)
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
